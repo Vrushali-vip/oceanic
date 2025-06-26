@@ -103,8 +103,12 @@ export default function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent className="bg-white dark:bg-black-950">
-              <div className="flex items-center mb-8 mt-4">
+              {/* <div className="flex items-center mb-8 mt-4">
                 <Anchor className="h-8 w-8 text-orange-500 mr-2" />
+                <span className="font-bold text-xl">Oceanic Advisors</span>
+              </div> */}
+              <div className="flex items-center mb-8 mt-4">
+                <Image src="/small2.png" alt="Oceanic Advisors" width={32} height={32} className="mr-2 ml-0" />
                 <span className="font-bold text-xl">Oceanic Advisors</span>
               </div>
               <div className="flex flex-col space-y-6">
