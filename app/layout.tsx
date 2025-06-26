@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   generator: 'v0.dev',
 }
 
+
+
 export default function RootLayout({
+
   children,
 }: Readonly<{
   children: React.ReactNode
@@ -17,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <Script
             src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
             strategy="afterInteractive"
           />
-          <Script 
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/simplex-noise.min.js" 
+          <Script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/simplex-noise.min.js"
             strategy="beforeInteractive"
           />
           {children}

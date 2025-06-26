@@ -326,9 +326,9 @@ export default function ContactCTA() {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <WaveCanvas />
-      </div>
+      </div> */}
     </section>
   )
 }
