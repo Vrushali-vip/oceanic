@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 100% 98%; /* Very light blue/white */
+    --foreground: 270 60% 15%; /* Dark purple */
+    --card: 210 100% 99%; /* Slightly off-white for cards */
+    --card-foreground: 270 60% 15%;
+    --popover: 210 100% 99%;
+    --popover-foreground: 270 60% 15%;
+    --primary: 270 80% 60%; /* Medium purple */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 300 70% 80%; /* Light magenta/pink */
+    --secondary-foreground: 270 60% 15%;
+    --muted: 210 60% 96.1%; /* Light grey-blue */
+    --muted-foreground: 270 40% 46.9%; /* Muted purple */
+    --accent: 180 70% 70%; /* Light cyan */
+    --accent-foreground: 270 60% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 50% 85%; /* Light blue-gray for borders */
+    --input: 210 50% 88%;
+    /* --ring: 270 80% 65%; Brighter purple for rings */
+    --radius: 0.5rem;
+    /* Custom brand orange (approx Tailwind orange-600 #EA580C) */
+    --orange-custom: 25 95% 53%;
+  }
+
+  .dark {
+    --background: 270 60% 5%; /* Deep dark purple */
+    --foreground: 210 100% 95%; /* Very light cyan/white */
+    --card: 270 60% 8%; /* Slightly lighter dark purple for cards */
+    --card-foreground: 210 100% 95%;
+    --popover: 270 60% 8%;
+    --popover-foreground: 210 100% 95%;
+    --primary: 300 100% 70%; /* Vibrant magenta */
+    --primary-foreground: 270 60% 5%;
+    --secondary: 240 80% 50%; /* Electric blue */
+    --secondary-foreground: 210 100% 95%;
+    --muted: 270 50% 15%; /* Dark muted purple */
+    --muted-foreground: 210 80% 75%; /* Lighter muted cyan */
+    --accent: 180 100% 50%; /* Bright cyan/teal */
+    --accent-foreground: 270 60% 5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 50% 20%; /* Darker purple for borders */
+    --input: 270 50% 25%;
+    --ring: 300 100% 75%; /* Brighter magenta for rings */
+    /* Keep the same orange for dark mode ‑ looks good on both */
+    --orange-custom: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    overflow-x: hidden; 
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10; /* Ensure it's behind everything */
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--background) / 0.9),
+      hsl(var(--secondary) / 0.1),
+      hsl(var(--primary) / 0.05),
+      hsl(var(--accent) / 0.1)
+    );
+    background-size: 400% 400%;
+    animation: cosmic-gradient 30s ease infinite;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Modified wave animation for more ethereal feel */
+@keyframes ethereal-wave {
+  0% {
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ethereal-wave-animation {
+  animation: ethereal-wave 5s ease-in-out infinite;
+}
+
+/* Parallax effect (existing, can be enhanced per component) */
+.parallax {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.parallax-card {
+  transition: transform 0.1s ease-out;
+}
+
+/* Modified compass animation for a smoother, more "magical" rotation */
+@keyframes mystical-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mystical-rotate-animation {
+  animation: mystical-rotate 8s ease-in-out infinite;
+}
+
+/* Energy ripple effect (replaces water-ripple) */
+.energy-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-ripple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, hsl(var(--accent) / 0.3) 0%, hsl(var(--accent) / 0) 70%);
+  transform: translate(-50%, -50%);
+  animation: energy-ripple-anim 3s linear infinite;
+}
+
+@keyframes energy-ripple-anim {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Abstract glowing border (replaces rope-border) */
+.glowing-border {
+  position: relative;
+}
+
+.glowing-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--secondary)));
+  background-size: 200% 200%;
+  animation: gradient-border-flow 5s ease infinite;
+  filter: blur(2px); /* Add a glow effect */
+}
+
+@keyframes gradient-border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cosmic text gradient */
+.cosmic-text-gradient {
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--secondary)), hsl(var(--primary)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% auto;
+  animation: cosmic-text-flow 10s ease infinite;
+}
+
+@keyframes cosmic-text-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated cosmic dust/nebula background (replaces wave-bg) */
+.cosmic-dust-bg {
+  position: relative;
+  overflow: hidden;
+}
+/* 
+.cosmic-dust-bg::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at top left, hsl(var(--primary) / 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, hsl(var(--accent) / 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at center, hsl(var(--secondary) / 0.1) 0%, transparent 40%);
+  background-size: 300% 300%, 200% 200%, 150% 150%;
+  animation: cosmic-flow 20s ease-in-out infinite alternate;
+  opacity: 0.5; 
+} */
+
+@keyframes cosmic-flow {
+  0% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  100% { background-position: 100% 100%, 0% 0%, 50% 50%; }
+}
+
+/* Holographic/Sci-fi container style (replaces shipping-container) */
+.sci-fi-container {
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background-color: hsl(var(--accent) / 0.1);
+  border: 1px solid hsl(var(--accent) / 0.5);
+  box-shadow: 0 0 15px hsl(var(--accent) / 0.5), inset 0 0 10px hsl(var(--accent) / 0.3);
+  z-index: 2;
+  transform-origin: center bottom;
+  backdrop-filter: blur(3px);
+}
+
+.sci-fi-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 5px;
+  background-color: hsl(var(--accent) / 0.7);
+  box-shadow: 0 0 5px hsl(var(--accent));
+}
+
+.sci-fi-container::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 5px;
+  background-color: hsl(var(--accent) / 0.7);
+  box-shadow: 0 0 5px hsl(var(--accent));
+}
+
+.container-primary {
+  background-color: hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 0 15px hsl(var(--primary) / 0.5), inset 0 0 10px hsl(var(--primary) / 0.3);
+}
+.container-primary::before, .container-primary::after {
+  background-color: hsl(var(--primary) / 0.7);
+  box-shadow: 0 0 5px hsl(var(--primary));
+}
+
+.container-secondary {
+  background-color: hsl(var(--secondary) / 0.1);
+  border-color: hsl(var(--secondary) / 0.5);
+  box-shadow: 0 0 15px hsl(var(--secondary) / 0.5), inset 0 0 10px hsl(var(--secondary) / 0.3);
+}
+.container-secondary::before, .container-secondary::after {
+  background-color: hsl(var(--secondary) / 0.7);
+  box-shadow: 0 0 5px hsl(var(--secondary));
+}
+
+/* Card Styles */
+.card-prominent {
+  @apply bg-card dark:bg-card rounded-xl shadow-xl border-l-4 border-primary transition-all duration-300 hover:shadow-2xl hover:border-l-8 hover:border-accent;
+}
+
+.card-prominent-dark {
+  @apply bg-card text-card-foreground rounded-xl shadow-xl border-l-4 border-primary transition-all duration-300 hover:shadow-2xl hover:border-l-8 hover:border-accent;
+}
+
+.card-glass {
+  @apply bg-card/80 dark:bg-card/80 backdrop-blur-md rounded-xl shadow-xl border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:border-accent/50;
+}
+
+/* Button Styles */
+.btn-primary-cosmic {
+  @apply bg-primary hover:bg-primary/80 text-primary-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/50;
+}
+
+.btn-accent-cosmic {
+  @apply bg-accent hover:bg-accent/80 text-accent-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/50;
+}
+
+.btn-outline-cosmic {
+  @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300;
+}
+
+/* Orange button variant */
+.btn-orange-cosmic {
+  /* structural utilities copied from primary */
+  @apply text-primary-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1;
+  background-color: hsl(var(--orange-custom));
+}
+.btn-orange-cosmic:hover {
+  background-color: hsl(var(--orange-custom) / 0.8);
+  box-shadow: 0 10px 15px -3px hsl(var(--orange-custom) / 0.5),
+              0 4px 6px -4px  hsl(var(--orange-custom) / 0.5);
+}
+
+/* New Animations */
+@keyframes cosmic-gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@keyframes holographic-shimmer {
+  0% { text-shadow: 0 0 5px hsl(var(--accent) / 0.5), 0 0 10px hsl(var(--accent) / 0.3); opacity: 0.8; }
+  50% { text-shadow: 0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3); opacity: 1; }
+  100% { text-shadow: 0 0 5px hsl(var(--accent) / 0.5), 0 0 10px hsl(var(--accent) / 0.3); opacity: 0.8; }
+}
+
+.animate-holographic-shimmer {
+  animation: holographic-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes particle-drift {
+  0% { transform: translate(0, 0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(var(--particle-x, 20px), var(--particle-y, -50px)); opacity: 0; }
+}
+
+/* For use with JS to set --particle-x/y for variety */
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: hsl(var(--accent));
+  border-radius: 50%;
+  animation: particle-drift 5s linear infinite;
+  box-shadow: 0 0 5px hsl(var(--accent));
+}
+
+@keyframes glitch-effect {
+  0%, 100% { transform: none; opacity: 1; }
+  25% { transform: skew(-0.5deg, -0.25deg); opacity: 0.75; }
+  50% { transform: none; opacity: 1; }
+  75% { transform: skew(0.5deg, 0.25deg); opacity: 0.75; }
+}
+
+.animate-glitch:hover {
+  animation: glitch-effect 0.3s linear infinite alternate;
+}
+
+/* Aurora Borealis Background Animation */
+.aurora-bg {
+  position: relative;
+  overflow: hidden;
+}
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary) / 0.3) 0%,
+    hsl(var(--secondary) / 0.3) 30%,
+    hsl(var(--accent) / 0.3) 70%,
+    hsl(var(--primary) / 0.3) 100%
+  );
+  background-size: 300% 300%;
+  animation: aurora-flow 15s ease-in-out infinite alternate;
+  opacity: 0.6; 
+}
+
+@keyframes aurora-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
