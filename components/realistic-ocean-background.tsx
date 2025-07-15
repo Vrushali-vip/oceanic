@@ -477,37 +477,20 @@
 
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 
 export default function RealisticOceanBackground() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [transform, setTransform] = useState({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20
-      const y = (e.clientY / window.innerHeight - 0.5) * 20
-      setTransform({ x, y })
-    }
-
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
-
   return (
     <video
       ref={videoRef}
-      src="/video1.mp4"
+      src="/hero-video.mov"
       autoPlay
       loop
       muted
       playsInline
       className="fixed top-0 left-0 w-full h-full object-cover -z-20 transition-transform duration-100"
-      style={{
-        transform: `translate(${transform.x}px, ${transform.y}px)`
-      }}
       aria-hidden="true"
-      draggable={false}
     />
   )
 }
