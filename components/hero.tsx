@@ -55,13 +55,10 @@ export default function Hero() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Ocean Background */}
       {isLoaded && <RealisticOceanBackground />}
 
-      {/* Modern UI Overlay */}
       {isLoaded && <ModernOverlay />}
 
-      {/* Content overlay */}
       <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center">
         <div ref={containerRef} className="max-w-3xl">
 
