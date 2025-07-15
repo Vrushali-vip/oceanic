@@ -216,7 +216,10 @@ export default function ContactCTA() {
   }, [])
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
+    <section id="contact"
+    style={{
+        background: "rgba(30,41,59,0.5)", // darker translucent background for light mode
+      }} className="py-24  dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 w-full h-20 wave-bg opacity-10"></div>
       <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-orange-100 dark:bg-orange-900/20 blur-3xl"></div>
       <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-orange-100 dark:bg-orange-900/20 blur-3xl"></div>
@@ -224,8 +227,8 @@ export default function ContactCTA() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            <h2 className="text-3xl text-white md:text-4xl font-bold mb-6">Get in Touch</h2>
+            <p className="text-lg text-white dark:text-white mb-8">
               We're here to answer your questions and discuss your maritime needs.
             </p>
 
@@ -234,7 +237,7 @@ export default function ContactCTA() {
                 <Mail className="h-6 w-6 mr-4 text-orange-500" />
                 <div>
                   <h4 className="font-semibold text-slate-800 dark:text-slate-200">Email</h4>
-                  <p className="text-slate-600 dark:text-slate-400">contact@oceanic-advisors.com</p>
+                  <p className="text-slate-600 dark:text-slate-400">admin@oceanicadvisors.org</p>
                 </div>
               </div>
 
@@ -242,7 +245,7 @@ export default function ContactCTA() {
                 <Phone className="h-6 w-6 mr-4 text-orange-500" />
                 <div>
                   <h4 className="font-semibold text-slate-800 dark:text-slate-200">Phone</h4>
-                  <p className="text-slate-600 dark:text-slate-400">+1 (555) 123-4567</p>
+                  <p className="text-slate-600 dark:text-slate-400">+97 1507502353</p>
                 </div>
               </div>
 
@@ -250,7 +253,7 @@ export default function ContactCTA() {
                 <MapPin className="h-6 w-6 mr-4 text-orange-500" />
                 <div>
                   <h4 className="font-semibold text-slate-800 dark:text-slate-200">Address</h4>
-                  <p className="text-slate-600 dark:text-slate-400">123 Harbor Avenue, Suite 400<br />Port City, PC 12345</p>
+                  <p className="text-slate-600 dark:text-slate-400">Westbury Tower 1, Businessbay,<br />Dubai, UAE</p>
                 </div>
               </div>
             </div>

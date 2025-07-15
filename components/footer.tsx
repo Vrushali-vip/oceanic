@@ -157,18 +157,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 text-orange-500 mt-0.5" />
-                <span className="text-slate-400">contact@oceanic-advisors.com</span>
+                <span className="text-slate-400">admin@oceanicadvisors.org</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 text-orange-500 mt-0.5" />
-                <span className="text-slate-400">+1 (555) 123-4567</span>
+                <span className="text-slate-400">+97 1507502353</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-orange-500 mt-0.5" />
                 <div className="text-slate-400">
-                  <p>123 Harbor Avenue</p>
-                  <p>Suite 400</p>
-                  <p>Port City, PC 12345</p>
+                  <p>Westbury Tower 1,</p>
+                  <p>Businessbay,</p>
+                  <p>Dubai, UAE</p>
                 </div>
               </li>
             </ul>

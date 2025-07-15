@@ -189,14 +189,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const slideshowImages = [
   { src: "/11.jpg", alt: "Oceanic Advisors Maritime Operations 1" },
-  { src: "/12.jpg", alt: "Vessel at Sea" },
+  { src: "/img1.jpg", alt: "Vessel at Sea" },
   { src: "/13.jpg", alt: "Ship Crew" },
   { src: "/14.jpg", alt: "Port Operations" },
-  { src: "/15.jpg", alt: "Technical Inspection" },
+  { src: "/img2.jpg", alt: "Technical Inspection" },
   { src: "/16.jpg", alt: "Vessel Inspection" },
-  { src: "/17.jpg", alt: "Vessel Inspection" },
+  { src: "/img3.jpg", alt: "Vessel Inspection" },
   { src: "/18.jpg", alt: "Vessel Inspection" },
-  { src: "/19.jpg", alt: "Vessel Inspection" },
+  { src: "/img4.jpg", alt: "Vessel Inspection" },
   { src: "/20.jpg", alt: "Vessel Inspection" },
 ]
 function ImageSlideshow() {
@@ -366,7 +366,9 @@ export default function About() {
   ]
 
   return (
-    <section id="aboutus" className="py-24 bg-white dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
+    <section id="aboutus" style={{
+        background: "rgba(30,41,59,0.5)", // darker translucent background for light mode
+      }} className="py-24  dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 wave-bg opacity-10"></div>
       <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-orange-100 dark:bg-orange-900/20 blur-3xl"></div>
@@ -378,8 +380,8 @@ export default function About() {
           <div className="inline-flex items-center justify-center p-2 bg-orange-50 dark:bg-orange-900/30 rounded-full mb-4">
             <Anchor className="h-6 w-6 text-orange-500" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">About Oceanic Advisors</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          <h2 className="text-3xl text-white md:text-5xl font-bold mb-4 drop-shadow">About Oceanic Advisors</h2>
+          <p className="text-lg text-white dark:text-white max-w-3xl mx-auto drop-shadow-lg">
             Oceanic Advisors was founded to bridge the operational gap between ship owners, classification societies, and port-based services — with deep-rooted technical expertise at sea and onshore.
           </p>
         </div>
@@ -388,19 +390,19 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Content */}
           <div className="animate-on-scroll">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">Two Decades of Maritime Excellence</h3>
+            <h3 className="text-2xl md:text-3xl text-white font-bold mb-6">Two Decades of Maritime Excellence</h3>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-slate-600 dark:text-slate-400 mb-6">
+              <p className="text-white dark:text-white mb-6">
                 Oceanic Advisors is a team of highly skilled Master Mariners and Chief Engineers with over two decades
                 of experience across various vessel types, including oil tankers, chemical tankers, LPG carriers, bulk
                 carriers, and more.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-6">
+              <p className="text-white dark:text-white mb-6">
                 We bring in-depth maritime expertise and operational efficiency to serve ship owners and managers
                 worldwide. Our comprehensive understanding of vessel operations, combined with our commitment to safety
                 and regulatory compliance, makes us the trusted partner for maritime solutions.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-8">
+              <p className="text-white dark:text-white mb-8">
                 From classification assistance to technical advisory services, our team delivers cost-effective
                 solutions that ensure seamless operations and optimal performance for your fleet.
               </p>
@@ -411,7 +413,7 @@ export default function About() {
               {capabilities.map((capability, index) => (
                 <div key={index} className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-orange-500 mr-3 flex-shrink-0" />
-                  <span className="text-sm text-slate-600 dark:text-slate-400">{capability}</span>
+                  <span className="text-sm text-white dark:text-white">{capability}</span>
                 </div>
               ))}
             </div>

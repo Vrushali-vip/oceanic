@@ -143,7 +143,9 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-24 bg-white dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
+    <section id="services" style={{
+        background: "rgba(30,41,59,0.5)", // darker translucent background for light mode
+      }} className="py-24  dark:bg-black-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 wave-bg opacity-10"></div>
       <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-orange-100 dark:bg-orange-900/20 blur-3xl"></div>
@@ -155,8 +157,8 @@ export default function Services() {
           <div className="inline-flex items-center justify-center p-2 bg-orange-50 dark:bg-orange-900/30 rounded-full mb-4">
             <Ship className="h-6 w-6 text-orange-500" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Maritime Services</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl  text-white font-bold mb-4">Our Maritime Services</h2>
+          <p className="text-lg text-white dark:text-white max-w-2xl mx-auto">
             Comprehensive maritime solutions delivered by experienced Master Mariners and Chief Engineers
           </p>
         </div>

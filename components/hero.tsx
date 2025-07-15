@@ -54,7 +54,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden aurora-bg">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Ocean Background */}
       {isLoaded && <RealisticOceanBackground />}
 
@@ -80,7 +80,7 @@ export default function Hero() {
           </p>
           <div className="hero-cta flex flex-col sm:flex-row gap-4">
             <Button
-              size="lg"
+              
               className="btn-orange-cosmic"
               onClick={() =>
                 document
@@ -91,7 +91,7 @@ export default function Hero() {
               <Rocket className="mr-2 h-5 w-5" />
               Get Started
             </Button>
-            <Button size="lg" className="btn-outline-cosmic">
+            <Button className="btn-outline-cosmic">
               <Stars className="mr-2 h-5 w-5" />
               Learn More
             </Button>

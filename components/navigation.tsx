@@ -98,7 +98,7 @@ export default function Navigation() {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={isScrolled ? "" : "text-white hover:bg-white/10"}>
+              <Button  className={isScrolled ? "" : "text-white hover:bg-white/10"}>
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
