@@ -1,158 +1,3 @@
-// import Navigation from "@/components/navigation"
-// import Footer from "@/components/footer"
-// import { FileText, Award, Flag, UserCheck, CheckCircle, Globe } from "lucide-react"
-// import Link from "next/link"
-
-// export default function MaritimeCircularsAndEndorsementsPage() {
-//   return (
-//     <div className="min-h-screen flex flex-col">
-//       <Navigation />
-//       <main className="flex-1">
-//         {/* Hero Section */}
-//         <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
-//           <div className="container mx-auto px-4">
-//             <div className="max-w-4xl mx-auto text-center">
-//               <div className="flex items-center justify-center mb-6">
-//                 <FileText className="h-12 w-12 text-orange-500 mr-4" />
-//                 <span className="text-orange-500 font-semibold text-lg">Maritime Circulars & Endorsements</span>
-//               </div>
-//               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
-//                 Maritime Circulars and Flag State Endorsements
-//               </h1>
-//               <p className="text-xl text-slate-600 leading-relaxed mb-8">
-//                 Staying current with the dynamic regulatory landscape is essential for compliant and uninterrupted maritime operations. This resource center provides ship owners, managers, and seafarers with vital information on the latest maritime circulars and the requirements for obtaining flag state endorsements and certificates of competency (CoC). Oceanic Advisors facilitates this entire process, ensuring your crew's documentation is always valid and globally recognized.
-//               </p>
-//             </div>
-//           </div>
-//         </section>
-
-//         {/* Importance of Documentation */}
-//         <section className="py-16 bg-slate-50">
-//           <div className="container mx-auto px-4">
-//             <div className="max-w-4xl mx-auto">
-//               <h2 className="text-3xl font-bold text-slate-900 mb-8">
-//                 The Importance of Valid Seafarer Documentation
-//               </h2>
-//               <div className="prose prose-lg max-w-none">
-//                 <p className="text-slate-600 leading-relaxed mb-8">
-//                   A vessel's ability to trade internationally is directly dependent on its crew holding valid and appropriate documentation recognized by the flag state. Failure to comply can result in Port State Control (PSC) detentions, costly delays, and significant legal penalties. We help you navigate the specific requirements of each flag administration to ensure seamless compliance.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         {/* Endorsement and Certification Services */}
-//         <section className="py-16 bg-white">
-//           <div className="container mx-auto px-4">
-//             <div className="max-w-4xl mx-auto">
-//               <h2 className="text-3xl font-bold text-slate-900 mb-8">
-//                 Endorsement and Certification Services by Flag State
-//               </h2>
-//               <p className="text-lg text-slate-600 mb-12">
-//                 Oceanic Advisors provides first-hand, official representation and processing services for a wide range of flag states. We specialize in the issuance and renewal of CoCs, Certificates of Endorsement (CoE), and Seaman's Record Books.
-//               </p>
-
-//               <div className="bg-slate-50 rounded-lg p-8 border-l-4 border-orange-500">
-//                 <div className="flex items-center mb-6">
-//                   <Globe className="h-8 w-8 text-orange-600 mr-4" />
-//                   <h3 className="text-2xl font-bold text-slate-900">
-//                     Flag States We Represent:
-//                   </h3>
-//                 </div>
-//                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-//                   {[
-//                     "Panama", "Belize", "Barbados", "Honduras", "Palau", "Comoros", 
-//                     "Moldova", "Togo", "Jamaica", "Saint Vincent & The Grenadines"
-//                   ].map((flag) => (
-//                     <div key={flag} className="flex items-center">
-//                       <Flag className="h-5 w-5 text-orange-500 mr-3" />
-//                       <span className="text-slate-700 font-medium">{flag}</span>
-//                     </div>
-//                   ))}
-//                 </div>
-//                 <p className="mt-6 text-sm text-slate-500">We offer services for a diverse range of popular flag states, ensuring comprehensive support for your fleet.</p>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         {/* Additional Services & Process */}
-//         <section className="py-16 bg-slate-50">
-//           <div className="container mx-auto px-4">
-//             <div className="max-w-4xl mx-auto space-y-12">
-//               {/* Seafarer Certificate Liquidity Check */}
-//               <div>
-//                 <h2 className="text-3xl font-bold text-slate-900 mb-4">Seafarer Certificate Liquidity Check</h2>
-//                 <p className="text-slate-600 leading-relaxed">
-//                   Unsure about the validity or global acceptance of a particular certificate? We offer a professional liquidity check service to assess and verify seafarer certificates, ensuring they meet STCW standards and are accepted by major port authorities and P&I clubs. This service provides peace of mind before hiring and deployment.
-//                 </p>
-//               </div>
-
-//               {/* How We Streamline the Process */}
-//               <div>
-//                 <h2 className="text-3xl font-bold text-slate-900 mb-8">How We Streamline the Process</h2>
-//                 <div className="space-y-6">
-//                   <div className="flex items-start">
-//                     <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-//                     <div>
-//                       <h4 className="font-bold text-slate-900 mb-1">Initial Consultation:</h4>
-//                       <p className="text-slate-600">We review your crew matrix and vessel flag to determine exact documentation needs.</p>
-//                     </div>
-//                   </div>
-//                   <div className="flex items-start">
-//                     <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-//                     <div>
-//                       <h4 className="font-bold text-slate-900 mb-1">Document Collection:</h4>
-//                       <p className="text-slate-600">We provide a clear checklist of required documents from the seafarer.</p>
-//                     </div>
-//                   </div>
-//                   <div className="flex items-start">
-//                     <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-//                     <div>
-//                       <h4 className="font-bold text-slate-900 mb-1">Application and Follow-Up:</h4>
-//                       <p className="text-slate-600">We handle the entire application process, liaising directly with the flag state administration.</p>
-//                     </div>
-//                   </div>
-//                    <div className="flex items-start">
-//                     <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
-//                     <div>
-//                       <h4 className="font-bold text-slate-900 mb-1">Delivery:</h4>
-//                       <p className="text-slate-600">We ensure the prompt and secure delivery of the official documents to you or your vessel.</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-
-//         {/* CTA Section */}
-//         <section className="py-16 bg-gradient-to-r from-orange-600 to-orange-700">
-//           <div className="container mx-auto px-4 text-center">
-//             <div className="max-w-3xl mx-auto">
-//               <h2 className="text-3xl font-bold text-white mb-6">
-//                 Ensure Your Crew is Compliant and Ready
-//               </h2>
-//               <p className="text-xl text-orange-100 mb-8">
-//                 Avoid documentation-related delays. Contact Oceanic Advisors for expert assistance with all your flag state endorsement and certification needs.
-//               </p>
-//               <Link 
-//                 href="/contact" 
-//                 className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center"
-//               >
-//                 <UserCheck className="h-5 w-5 mr-2" />
-//                 Verify Crew Documentation Now
-//               </Link>
-//             </div>
-//           </div>
-//         </section>
-//       </main>
-//       <Footer />
-//     </div>
-//   )
-// }
 
 "use client"
 
@@ -163,6 +8,27 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { FileText, Award, Flag, UserCheck, CheckCircle, Globe } from "lucide-react"
 import Link from "next/link"
+
+export const metadata = {
+  title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+  description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+  keywords: [
+    "maritime circulars", "flag state endorsements", "seafarer documentation", "maritime compliance", "Oceanic Advisors", "shipping", "compliance", "seafarer documentation"
+  ],
+  openGraph: {
+    title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+    description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+    url: "https://oceanicadvisors.org/circulars-and-endorsements",
+    images: ["/meta.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+    description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+    images: ["/meta.png"],
+  },
+  }
+
 
 gsap.registerPlugin(ScrollTrigger)
 

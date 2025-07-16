@@ -272,22 +272,6 @@ export default function Services() {
             </p>
           </div>
 
-          {/* <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "1", title: "Initial Consultation", desc: "Discuss your specific requirements" },
-              { step: "2", title: "Service Planning", desc: "Develop customized solution approach" },
-              { step: "3", title: "Execution", desc: "Deliver services with expert precision" },
-              { step: "4", title: "Follow-up", desc: "Ensure satisfaction and ongoing support" },
-            ].map((process, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 shadow-lg">
-                  {process.step}
-                </div>
-                <h4 className="font-semibold mb-2">{process.title}</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">{process.desc}</p>
-              </div>
-            ))}
-          </div> */}
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "1", title: "Initial Consultation", desc: "Discuss your specific requirements" },
