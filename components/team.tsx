@@ -373,7 +373,7 @@ export default function Team() {
             <div className="text-slate-600 dark:text-slate-400">Years Combined Experience</div>
           </div>
           <div className="text-center bg-white dark:bg-black-800 p-8 rounded-xl shadow-lg border-t-4 border-orange-500">
-            <div className="text-4xl font-bold text-orange-500 mb-2">500+</div>
+            <div className="text-4xl font-bold text-orange-500 mb-2">150+</div>
             <div className="text-slate-600 dark:text-slate-400">Successful Projects</div>
           </div>
           <div className="text-center bg-white dark:bg-black-800 p-8 rounded-xl shadow-lg border-t-4 border-orange-500">
