@@ -174,7 +174,7 @@ export default function Footer() {
             </ul>
 
             {/* Newsletter signup */}
-            <div className="mt-6 bg-black-900 p-4 rounded-lg border-l-4 border-orange-500">
+            {/* <div className="mt-6 bg-black-900 p-4 rounded-lg border-l-4 border-orange-500">
               <h4 className="font-medium mb-2">Subscribe to our newsletter</h4>
               <div className="flex">
                 <input
@@ -186,7 +186,7 @@ export default function Footer() {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -194,17 +194,7 @@ export default function Footer() {
           <p className="text-slate-500 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Oceanic Advisors. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link href="#" className="text-slate-500 hover:text-orange-500 text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-slate-500 hover:text-orange-500 text-sm transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-slate-500 hover:text-orange-500 text-sm transition-colors">
-              Cookie Policy
-            </Link>
-          </div>
+          
         </div>
       </div>
 
