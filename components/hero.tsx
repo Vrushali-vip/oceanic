@@ -63,14 +63,15 @@ export default function Hero() {
         <div ref={containerRef} className="max-w-3xl">
 
           <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6">
-            <span className="inline-block text-foreground px-3 py-2 rounded mb-2">
+            <span className="inline-block text-foreground px-3 py-2 rounded mb-2 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.25)" }}>
               Navigate the Future
             </span>
             <br />
-            <span className="inline-block text-foreground px-3 py-2 rounded">
+            <span className="inline-block text-foreground px-3 py-2 rounded backdrop-blur-md" style={{ background: "rgba(255,255,255,0.25)" }}>
               of Maritime Logistics
             </span>
           </h1>
+
 
           <p className="hero-description text-xl md:text-2xl text-white mb-8 drop-shadow-md">
             End-to-end technical supervision, compliance, and operational support for ship owners and managers worldwide.

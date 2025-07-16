@@ -23,7 +23,7 @@ export async function sendContactNotification({
     // to: "vrushali.patil@alphalake.ai",
     subject: "New Contact Message",
     html: `
-      <h2>New Contact Form Submission</h2>
+      <h2>New Contact Request at Oceanic Advisors</h2>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Message:</strong><br/>${message}</p>
@@ -32,7 +32,7 @@ export async function sendContactNotification({
 
   try {
     const info = await transporter.sendMail(mailOptions)
-    console.log("✅ Email sent:", info)
+    // console.log("✅ Email sent:", info)
   } catch (err) {
     console.error("❌ Email sending failed:", err)
     throw err

@@ -5,7 +5,6 @@ import { useRef, useEffect, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Mail, Phone, MapPin } from "lucide-react"
-import WaveCanvas from "./WaveCanvas"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -166,7 +165,7 @@ export default function ContactCTA() {
 
                   <button
                     type="submit"
-                    className="btn-orange w-full"
+                    className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded w-full"
                     disabled={status === "loading"}
                   >
                     {status === "loading" ? "Sending..." : "Send Message"}
@@ -180,10 +179,6 @@ export default function ContactCTA() {
           </div>
         </div>
       </div>
-
-      {/* <div className="absolute inset-0 z-0">
-        <WaveCanvas />
-      </div> */}
     </section>
   )
 }
