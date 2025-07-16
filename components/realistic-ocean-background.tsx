@@ -484,7 +484,7 @@ export default function RealisticOceanBackground() {
   return (
     <video
       ref={videoRef}
-      src="/hero-video.mov"
+      src="/hero.mov"
       autoPlay
       loop
       muted
