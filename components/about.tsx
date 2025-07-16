@@ -188,16 +188,16 @@ import React from "react"
 gsap.registerPlugin(ScrollTrigger)
 
 const slideshowImages = [
-  { src: "/1.jpeg", alt: "Oceanic Advisors Maritime Operations 1" },
-  { src: "/2.jpeg", alt: "Vessel at Sea" },
-  { src: "/3.jpeg", alt: "Ship Crew" },
-  { src: "/4.jpeg", alt: "Port Operations" },
-  { src: "/5.jpeg", alt: "Technical Inspection" },
-  { src: "/6.jpeg", alt: "Vessel Inspection" },
-  { src: "/7.jpeg", alt: "Vessel Inspection" },
-  { src: "/8.jpeg", alt: "Vessel Inspection" },
-  { src: "/9.jpeg", alt: "Vessel Inspection" },
-  { src: "/10.jpeg", alt: "Vessel Inspection" },
+  { src: "/1.jpg", alt: "Oceanic Advisors Maritime Operations 1" },
+  { src: "/2.jpg", alt: "Vessel at Sea" },
+  { src: "/3.jpg", alt: "Ship Crew" },
+  { src: "/4.jpg", alt: "Port Operations" },
+  { src: "/5.jpg", alt: "Technical Inspection" },
+  { src: "/6.jpg", alt: "Vessel Inspection" },
+  { src: "/7.jpg", alt: "Vessel Inspection" },
+  { src: "/8.jpg", alt: "Vessel Inspection" },
+  { src: "/9.jpg", alt: "Vessel Inspection" },
+  { src: "/10.jpg", alt: "Vessel Inspection" },
 ]
 function ImageSlideshow() {
   const [current, setCurrent] = useState(0)
