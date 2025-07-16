@@ -9,25 +9,25 @@ import Footer from "@/components/footer"
 import { FileText, Award, Flag, UserCheck, CheckCircle, Globe } from "lucide-react"
 import Link from "next/link"
 
-export const metadata = {
-  title: "Maritime Circulars & Endorsements | Oceanic Advisors",
-  description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
-  keywords: [
-    "maritime circulars", "flag state endorsements", "seafarer documentation", "maritime compliance", "Oceanic Advisors", "shipping", "compliance", "seafarer documentation"
-  ],
-  openGraph: {
-    title: "Maritime Circulars & Endorsements | Oceanic Advisors",
-    description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
-    url: "https://oceanicadvisors.org/circulars-and-endorsements",
-    images: ["/meta.png"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Maritime Circulars & Endorsements | Oceanic Advisors",
-    description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
-    images: ["/meta.png"],
-  },
-  }
+// export const metadata = {
+//   title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+//   description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+//   keywords: [
+//     "maritime circulars", "flag state endorsements", "seafarer documentation", "maritime compliance", "Oceanic Advisors", "shipping", "compliance", "seafarer documentation"
+//   ],
+//   openGraph: {
+//     title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+//     description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+//     url: "https://oceanicadvisors.org/circulars-and-endorsements",
+//     images: ["/meta.png"],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Maritime Circulars & Endorsements | Oceanic Advisors",
+//     description: "Discover the maritime circulars and endorsements provided by Oceanic Advisors to ensure compliance and operational excellence.",
+//     images: ["/meta.png"],
+//   },
+// }
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -64,7 +64,7 @@ export default function MaritimeCircularsAndEndorsementsPage() {
   }, [])
 
   const flagStates = [
-    "Panama", "Belize", "Barbados", "Honduras", "Palau", "Comoros", 
+    "Panama", "Belize", "Barbados", "Honduras", "Palau", "Comoros",
     "Moldova", "Togo", "Jamaica", "Saint Vincent & The Grenadines"
   ]
 
@@ -194,7 +194,7 @@ export default function MaritimeCircularsAndEndorsementsPage() {
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">How We Streamline the Process</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {processSteps.map((step, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="bg-white dark:bg-black-800 rounded-xl p-6 shadow-sm hover:shadow-lg dark:shadow-black-800/50 dark:hover:shadow-black-800/70 transition-all duration-300 transform hover:-translate-y-2 group"
                     >
@@ -227,8 +227,8 @@ export default function MaritimeCircularsAndEndorsementsPage() {
               <p className="text-xl text-orange-100 dark:text-orange-200 mb-8">
                 Avoid documentation-related delays. Contact Oceanic Advisors for expert assistance with all your flag state endorsement and certification needs.
               </p>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-white text-orange-600 hover:bg-orange-50 dark:bg-white dark:text-orange-700 dark:hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center transform hover:scale-105"
               >
                 <UserCheck className="h-5 w-5 mr-2" />
